@@ -22,3 +22,15 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+$('h2.fast-text').waypoint(function(direction) {
+  $('.fast-text').addClass('animation-fast fast-text-animation');
+}, { offset: '75%' }
+);
+$('.box').waypoint(function(direction) {
+  $('.box').addClass('animation-slow box-animation');
+}, { offset: '75%' }
+);
+$('.rotate').waypoint(function(direction) {
+  $('.rotate').addClass('animation-medium rotate-animation');
+}, { offset: '75%' }
+);

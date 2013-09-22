@@ -1,0 +1,36 @@
+@import "base";
+@import "animation";
+
+#page {
+    max-width:320px;
+    margin: 0 auto;
+}
+.red {background-color: $red;}
+.green {background-color: $green;}
+.blue {background-color: $blue;}
+.clear {clear: both;}
+html {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+h1,h2,h3 {
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+	font-size:ms(2);
+}
+h2 {
+	font-size:ms(1);
+}
+p  {
+	font-size: ms(0);
+}
+
+#whitefade {
+	position: fixed;
+	z-index: 999;
+	height: ms(2);
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	@include background-image(linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)));
+}

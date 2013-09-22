@@ -1,0 +1,47 @@
+@import "base";
+
+$default-origin-x: 0% ;
+$default-origin-y: 50%;
+
+.animation-fast 	{ @include transition(all .5s); }
+.animation-medium 	{ @include transition(all 1s ease-in); }
+.animation-slow 	{ @include transition(all 2s); }
+
+.fast-text {
+	color: rgba(255,255,255,0);
+	@include text-shadow(rgba(255,255,255,0) -2rem 0 0, rgba(255,255,255,0) -4rem 0 0, rgba(255,255,255,0) -8rem 0 0);
+}
+.fast-text-animation {
+	@include text-shadow(fade_out($black, .5) 0 0 0, fade_out($black, .5) 0 0 0, fade_out($black, .5) 0 0 0);
+}
+.box {
+    display: block;
+    border: 1px solid #666;
+    width: ms(3);
+    height: ms(3rem);
+    margin: ms(0);
+    float: left;
+    opacity: 0;
+}
+.box-animation {
+  position: relative;
+  background-color: #fff;
+}
+.rotate-container {
+	perspective: 800px;
+  transform-style: preserve-3d;
+  .rotate {
+  	color: rgba(255,255,255,0);
+    //transform-style: preserve-3d;
+	  //transform: rotateY( 45deg );
+	  @include transform-style(preserve-3d);
+		@include rotateY(90deg);
+		@include transform-origin(-50%,50%);
+  }
+	.rotate-animation {
+		color: $black;
+		@include rotateY(0deg);
+		//background-color: yellow;
+		//@include perspective(800);
+	}
+}
